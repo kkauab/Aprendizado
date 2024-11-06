@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+    <script>
+        var nome = prompt('Digite seu nome')
+        var m = prompt('Digite sua altura em cm')
+        var peso = prompt('Digite seu peso kg')
+        var texto = ""
+
+        var m = parseFloat(m / 100) 
+        var peso = parseFloat(peso)
+
+        var imc = peso / m ** 2
+
+        if (imc < 16) {
+            texto = "Baixo peso muito grave"
+        }
+         else if (imc >= 16 && imc <= 16.99 ) {
+            texto = "Baixo peso grave "
+        }
+        else if (imc >= 17 && imc <= 18.49 ) {
+            texto = " Baixo peso "
+        }
+        else if (imc >= 18.50 && imc <= 24.99 ) {
+            texto = "Peso normal"
+        }
+        else if (imc >= 25 && imc <= 29.99 ) {
+            texto = "Sobrepeso"
+        }
+        else if (imc >= 30 && imc <= 34.99 ) {
+            texto = "Obresidade grau I"
+        }
+        else if (imc >= 35 && imc <= 39.99) {
+            texto = "Obesidade grau II"
+        }
+        else if (imc >= 40) {
+            texto = "Obesidade grau III"
+        }
+
+        alert(nome + ' possui o IMC igual a ' + imc + ', sendo classificado como: ' + texto)
+    </script>
+</head>
+<body>
+</body>
+</html>    
